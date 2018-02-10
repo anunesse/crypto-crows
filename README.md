@@ -1,9 +1,3 @@
-## Crypto Crows
-_Simple crypto tracker client_
+## Crypto Crows_Simple crypto tracker client_
 
-```javascript
-function () {
-  const x = 42;
-  return x;
-}
-```
+By Alexandre and William
