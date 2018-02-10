@@ -1,22 +1,15 @@
 const request =
-	'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH,BTC&tsyms=EUR';
-const data = [
-	{ y: 67, label: "Inbox" },
-	{ y: 28, label: "Archives" },
-	{ y: 10, label: "Labels" },
-	{ y: 7, label: "Drafts"},
-	{ y: 15, label: "Trash"},
-	{ y: 6, label: "Spam"}
-];
+	'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,TH,XRP,BCH,ADA,LTC,XLM,NEO,EOS&tsyms=EUR';
 
 fetch(request)
 	.then(response => response.json())
 	.then(response => {
-		drawChart(data);
-		const app = new Vue({
-			el: '#app',
-			data: {
-				result: response.DISPLAY
-			}
+		let data = [];
+		Object.keys(response.RAW).forEach(k => {
+			data.push({
+				y: response.RAW[k] ? response.RAW[k].EUR.PRICE : 0,
+				label: k
+			});
 		});
+		drawChart(data);
 	});

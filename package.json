@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/anunesse/crypto-crows#readme",
   "dependencies": {
-    "canvasjs": "^1.8.1",
-    "vue": "^2.5.13"
+    "canvasjs": "^1.8.1"
   }
 }
