@@ -2,7 +2,7 @@ drawChart = (data) => {
 
 	const chart = new CanvasJS.Chart("chartContainer", {
 		title:{
-			text: "Data"
+			text: "Simple main crypto trends"
 		},
 		data: [{
 			type: "column",
