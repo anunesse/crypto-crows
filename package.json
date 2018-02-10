@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/anunesse/crypto-crows/issues"
   },
-  "homepage": "https://github.com/anunesse/crypto-crows#readme"
+  "homepage": "https://github.com/anunesse/crypto-crows#readme",
+  "dependencies": {
+    "vue": "^2.5.13"
+  }
 }
