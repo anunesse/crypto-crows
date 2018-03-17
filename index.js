@@ -14,6 +14,9 @@ const requestData = () => {
 			});
 			drawChart(data);
 		})
+		.then(() => {
+			console.info('data loaded');
+		})
 };
 
 requestData();
