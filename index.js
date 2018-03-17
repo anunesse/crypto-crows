@@ -4,11 +4,11 @@ const request =
 const requestData = () => {
 	fetch(request)
 		.then(response => response.json())
-		.then(response => {
+		.then(responseJSON => {
 			let data = [];
-			Object.keys(response.RAW).forEach(k => {
+			Object.keys(responseJSON.RAW).forEach(k => {
 				data.push({
-					y: response.RAW[k] ? response.RAW[k].EUR.PRICE : 0,
+					y: responseJSON.RAW[k] ? responseJSON.RAW[k].EUR.PRICE : 0,
 					label: k
 				});
 			});
